@@ -1,0 +1,13 @@
+<paper-input label="Search Skill"  ng-model="search.name"></paper-input>
+<div masonry="{ transitionDuration: '0.4s' }" class="cont-m">
+    <div class="masonry-brick lang" ng-repeat="lang in Langs  | filter:search:strict" random-w data-index="{{$index}}" >
+        <p>{{lang.name}}</p>
+        <div class="fab green">
+            <div class="icooon skill-true">
+                <core-icon icon="create"></core-icon>
+            </div>
+            <paper-ripple class="square recenteringTouch" fit></paper-ripple>
+        </div>
+        <paper-shadow z="1"></paper-shadow>
+    </div>
+</div>
